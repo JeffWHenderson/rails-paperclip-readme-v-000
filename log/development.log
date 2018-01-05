@@ -479,3 +479,10 @@ Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 0.3ms)
 
 Started GET "/assets/original/default-4d452c63d330fa4ca5200c3fa437bfd595741d59846222f62704f02365fdbc6c.png" for 74.139.8.180 at 2018-01-05 23:26:54 +0000
 Cannot render console from 74.139.8.180! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/authors" for 74.139.8.180 at 2018-01-05 23:28:54 +0000
+Cannot render console from 74.139.8.180! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (1.0ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered authors/index.html.erb within layouts/application (41.9ms)
