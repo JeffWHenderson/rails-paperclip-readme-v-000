@@ -467,3 +467,15 @@ ActionView::Template::Error (undefined method `avatar' for nil:NilClass):
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (76.5ms)
+
+
+Started GET "/authors" for 74.139.8.180 at 2018-01-05 23:26:54 +0000
+Cannot render console from 74.139.8.180! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/original/default-4d452c63d330fa4ca5200c3fa437bfd595741d59846222f62704f02365fdbc6c.png" for 74.139.8.180 at 2018-01-05 23:26:54 +0000
+Cannot render console from 74.139.8.180! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
