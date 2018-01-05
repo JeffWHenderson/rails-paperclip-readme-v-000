@@ -375,3 +375,25 @@ Migrating to AddAttachmentAvatarToAuthors (20180105231706)
   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180105231706"]]
   [1m[35m (2.7ms)[0m  commit transaction
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/authors/new" for 74.139.8.180 at 2018-01-05 23:21:44 +0000
+Cannot render console from 74.139.8.180! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthorsController#new as HTML
+  Rendered authors/_form.html.erb (53.9ms)
+  Rendered authors/new.html.erb within layouts/application (61.3ms)
+Completed 200 OK in 630ms (Views: 586.0ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/authors" for 74.139.8.180 at 2018-01-05 23:22:18 +0000
+Cannot render console from 74.139.8.180! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uiSU0Ta2zbnYWYYRMIC4YKuKSAYYKlzhJloQ8M++yWVkhKZIJmisYIiaQxFZNUo5S0O32oeG+HgggcoEbmyTVA==", "author"=>{"avatar"=>#<ActionDispatch::Http::UploadedFile:0x007f2feaa15e98 @tempfile=#<Tempfile:/tmp/RackMultipart20180105-1280-1b2l6ol.JPG>, @original_filename="IMG_0284.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"author[avatar]\"; filename=\"IMG_0284.JPG\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"Beyang", "bio"=>"The greatest author of all time "}, "commit"=>"Create Author"}
+Command :: file -b --mime '/tmp/555f54c679a42bcca59fcb30ba7d95ee20180105-1280-2hcx1n.JPG'
+  [1m[35m (0.4ms)[0m  begin transaction
+Command :: file -b --mime '/tmp/555f54c679a42bcca59fcb30ba7d95ee20180105-1280-1ofjzj5.JPG'
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "authors" ("bio", "name", "avatar_file_name", "avatar_content_type", "avatar_file_size", "avatar_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["bio", "The greatest author of all time "], ["name", "Beyang"], ["avatar_file_name", "IMG_0284.JPG"], ["avatar_content_type", "image/jpeg"], ["avatar_file_size", 2680327], ["avatar_updated_at", "2018-01-05 23:22:18.470126"], ["created_at", "2018-01-05 23:22:18.542996"], ["updated_at", "2018-01-05 23:22:18.542996"]]
+  [1m[35m (4.5ms)[0m  commit transaction
+Redirected to http://67.205.130.239:33533/authors/8
+Completed 302 Found in 115ms (ActiveRecord: 5.6ms)
